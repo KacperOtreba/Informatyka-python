@@ -1,0 +1,27 @@
+Poziom maturalny z liczb binarnych
+
+1. Napisz alg dodawania dwóch liczb binarnych o tej samej długości.
+
+2. Napisz algorytm dodawania dwóch liczb binarnych o różnej długości.
+
+3. Wypisz wszystkie liczby binarne sześciocyfrowe, w których liczba jedynek 
+   jest 2 razy większa od liczby zer.
+
+100000 => 32
+111111 => 63
+
+100000 + 000001 = 100001
+100001 + 000001 = 100010
+..
+                = 111111
+
+GRATIS
+
+1. Napisz algorytm szybkiego potęgowania w wersji iteracyjnej
+2. Napisz algorytm szybkiego potęgowania w wersji rekurencyjnej
+
+
+Zad:
+1. Sprawdź czy liczba binarna jest podzielna przez 4
+2. Sprawdź która z wpisanych liczb jest większa
+

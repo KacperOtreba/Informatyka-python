@@ -1,27 +1,61 @@
-def Leader(T: list[int]) -> int | None:
-    maks = T[0]
-    ile = 1
-    for i in range(1, len(T)):
-        if ile == 0:
-            maks = T[i]
-            ile = 1
+from random import randint
+
+# Algorytm poszukiwania leadera:
+# Table: 1 1 1 0 0
+# Leader - 1
+
+# Table2: 1 1 1 0 0 0
+# Brak leadera
+
+#Table = [2, 3, 1, 1, 1, 2, 1]
+Table = [randint(0, 2) for _ in range(5)]
+print(f"Table: {Table}")
+
+def leader(Table):
+    leader = Table[0]
+    ilosc = 1
+    for i in range(1, len(Table)):
+        if ilosc == 0:
+            leader = Table[i]
+            ilosc = 1
         else:
-            if T[i] == maks:
-                ile += 1
+            if Table[i] == leader:
+                ilosc += 1
             else:
-                ile -= 1
-    if ile == 0:
-        return None
+                ilosc -= 1
+
+    if ilosc == 0:
+        print("Brak leadera")
     else:
-        iloscMaksow = 0
-        for i in range(1, len(T)):
-            if T[i] == maks:
-                iloscMaksow += 1
-    if iloscMaksow > len(T) / 2:
-        return maks
+        ilosc_leaderow = 0
+        for i in range(len(Table)):
+            if Table[i] == leader:
+                ilosc_leaderow += 1
+        if ilosc_leaderow > len(Table) // 2:
+            print(f"Leader: {leader}")
+        else:
+            print("Brak leadera")
 
 
-T1 = [1, 1, 1, 1, 2, 3, 4, 5, 1, 1, 1]
-T2 = [1, 2, 2, 3, 3, 3, 3, 2, 3]
-print(Leader(T1))
-print(Leader(T2))
+leader(Table)
+print("\n")
+
+# Inna wersja, polegajaca na policzeniu wystapien liczb za pomoca innej tablicy, nastepnie sprawdzajac, czy ilosc najczesciej wystepujacego elementu jest wieksza od polowy ilosci wszystkich liczb
+# Nwm czy sie przyda
+def leader2(Table):
+    pomoc = []
+    for i in range(max(Table) + 1):
+        pomoc.append(0)
+
+    for i in range(len(Table)):
+        pomoc[Table[i]] += 1
+    print(f"Tablica pomocna: {pomoc}")
+
+    if max(pomoc) > len(Table) / 2:
+        leader = pomoc.index(max(pomoc))
+        print(f"Leader: {leader}")
+    else:
+        print("Brak leadera")
+
+leader2(Table)
+

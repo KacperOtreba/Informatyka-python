@@ -1,0 +1,7 @@
+Banalne zadania - poziom wejściówki IP 71
+
+1. Sprawdź czy wpisana przez usera liczba binarna jest parzysta
+
+2. Określ parzystość sumy/różnicy/iloczynu dwóch wpisanych 
+   przez usera liczb binarnych
+

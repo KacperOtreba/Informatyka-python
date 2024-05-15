@@ -4,7 +4,6 @@ def decToBin(decymalna):
     while decymalna > 0:
         binarna = str(decymalna % 2) + binarna
         decymalna //= 2
-
     return binarna
 
 

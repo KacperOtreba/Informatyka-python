@@ -1,20 +1,23 @@
-def NR_EPS(x, eps):
-    a = x
+# p - liczba, z ktorej szukamy pierwiastek
+# n - ilosc krokow
+def newton_raphson1(p, epsilon):
+    a = p
     b = 1
-    while abs(a - b) > eps:
+    while a - b > epsilon:
         a = (a + b) / 2
-        b = x / a
+        b = p / a
     return a
 
+print(newton_raphson1(4900, 0.000001))
 
-def NR(x, n):
-    a = x
+
+
+def newton_raphson2(p, n):
+    a = p
     b = 1
     for i in range(n):
         a = (a + b) / 2
-        b = x / a
+        b = p / a
     return a
 
-
-print(NR_EPS(49, 0.001))
-print(NR(49, 7))
+print(newton_raphson2(4900, 7))

@@ -1,0 +1,41 @@
+def dec2bin(n):
+    w = ""
+    while n > 0:
+        w = str(n % 2) + w
+        n = n // 2
+    return w
+
+def dec2binreku(n):
+    if n == 0:
+        return ""
+    return dec2binreku(n // 2) + str(n % 2)
+
+def dec2binreku2(n):
+    if n == 0:
+        return
+    dec2binreku2(n//2)
+    print(n%2, end="")
+
+print(dec2bin(39))
+print(dec2binreku(39))
+dec2binreku2(39)
+
+
+
+def bin2dec(n):    # Schemat Hornera - jak chcecie
+    w = 0
+    for i in range(len(n)):
+        w = w * 2 + int(n[i])
+    return w
+
+def bin2dec2(n):
+    s = 0
+    for i in range(len(n)):
+        s = s + 2**i * int(n[-i-1])
+    return s
+
+# def bin2dec2reku(n)
+
+print("\n")
+print(bin2dec("10011"))
+print(bin2dec2("10011"))
