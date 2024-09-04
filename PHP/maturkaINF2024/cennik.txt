@@ -1,0 +1,16 @@
+Alwa	2,9
+Antonowka	3,2
+Cortland	3,2
+Delikates	3,2
+Gala	3,4
+Gloster	3,4
+Idared	3,4
+Jonagold	3,4
+Jonagored	3,5
+Kosztela	2,5
+Ligol	3,4
+Lobo	2,5
+Melba	2,7
+Papierowka	3,2
+Reneta	3,5
+Szampion	2,4
